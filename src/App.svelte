@@ -2,7 +2,7 @@
     import Home from "./components/Home.svelte";
     import Admin from "./components/Admin.svelte";
     
-    var main_tab = "admin"
+    var main_tab = "home"
 </script>
 
 <main>
