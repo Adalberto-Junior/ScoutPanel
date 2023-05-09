@@ -14,7 +14,7 @@
     </div>
     <div style="height: 100%; width: 75%; position: absolute; top: 0; right: 0;">
         {#if admin_tab=="inscrever"}
-            <div style="height: 95%" class="shadow-none p-3 m-3 bg-light rounded">
+            <div style="height: 95%">
                 <Inscrever/>
             </div>
         {/if}
