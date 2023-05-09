@@ -9,18 +9,28 @@
             <div style="height: 100%; overflow: auto">
                 <div class="card mb-3">
                     <div class="card-body">
-                        <div class="mb-3">
-                          <textarea class="form-control" placeholder="Escrever publicação..." rows="3"></textarea>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div class="d-flex">
-                            <button type="button" class="btn btn-link"><i class="bi bi-image-fill"></i></button>
-                            <button type="button" class="btn btn-link"><i class="bi bi-emoji-smile"></i></button>
-                            <button type="button" class="btn btn-link"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1"><path d="M128 938.666667V341.333333h170.666667v597.333334H128m298.666667 0V85.333333h170.666666v853.333334h-170.666666m298.666666 0v-341.333334h170.666667v341.333334h-170.666667z" fill=""/><path xmlns="http://www.w3.org/2000/svg" d="M128 938.666667V341.333333h170.666667v597.333334H128m298.666667 0V85.333333h170.666666v853.333334h-170.666666m298.666666 0v-341.333334h170.666667v341.333334h-170.666667z" fill=""/></svg></button>
+                        <div class="row">
+                          <div class="col-md-1">
+                            <!-- This div will take up 25% of the left space -->
+                            <div><img src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png" style="width: 50px; heigth: 50px" class="m-1" alt="user"></div>
                           </div>
-                          <button class="btn btn-primary">Publicar</button>
+                          <div class="col-md-11">
+                            <!-- The main content of the card-body goes here -->
+                            <div class="mb-3">
+                              <textarea class="form-control" placeholder="Escrever publicação..." rows="3"></textarea>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                              <div class="d-flex">
+                                <button type="button" class="btn btn-link"><i class="bi bi-image-fill"></i></button>
+                                <button type="button" class="btn btn-link"><i class="bi bi-emoji-smile"></i></button>
+                                <button type="button" class="btn btn-link"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1"><path d="M128 938.666667V341.333333h170.666667v597.333334H128m298.666667 0V85.333333h170.666666v853.333334h-170.666666m298.666666 0v-341.333334h170.666667v341.333334h-170.666667z" fill=""/><path xmlns="http://www.w3.org/2000/svg" d="M128 938.666667V341.333333h170.666667v597.333334H128m298.666667 0V85.333333h170.666666v853.333334h-170.666666m298.666666 0v-341.333334h170.666667v341.333334h-170.666667z" fill=""/></svg></button>
+                              </div>
+                              <button class="btn btn-primary">Publicar</button>
+                            </div>
+                          </div>
                         </div>
-                    </div>
+                      </div>
+                      
                   </div>
                   
                 {#each n as i}
