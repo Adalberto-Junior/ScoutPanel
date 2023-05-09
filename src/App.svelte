@@ -6,7 +6,7 @@
 </script>
 
 <main>
-    <div style="height: 100%; width: 20%; position: absolute; top: 0; left: 0;">
+    <div style="height: 100%; width: 20%; position: absolute; top: 0; left: 0; overflow: auto">
         <div class="shadow-none p-3 m-3 bg-light rounded"><a href="#" class="nav-link" style="display: block" on:click={()=>main_tab="home"}>ScoutPanel</a></div>
         <div class="shadow-none p-3 m-3 bg-light rounded"><a href="#" class="nav-link" style="display: block" on:click={()=>main_tab="perfil"}>Perfil</a></div>
         <div class="shadow-none p-3 m-3 bg-light rounded"><a href="#" class="nav-link" style="display: block" on:click={()=>main_tab="notificacoes"}>Notificações</a></div>

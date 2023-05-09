@@ -1,10 +1,10 @@
 <script>
-    var n = [1, 1, 1, 1, 1]
+    var n = [1, 1, 1, 1, 1, 1, 1, 1, 1]
 </script>
 
 <main>
-    <div style="height: 100%; width: 75%; position: absolute; top: 0; left: 0;">
-        <div style="height: 95%" class="shadow-none p-3 m-3 bg-light rounded">
+    <div style="height: 100%; width: 75%; position: absolute; top: 0; left: 0;" class="p-3">
+        <div style="height: 100%" class="shadow-none p-3 bg-light rounded">
             <div style="height: 100%; overflow: auto">
                 <div class="p-3 bg-body rounded" style="width: 100%">
                     <img src="https://em-content.zobj.net/thumbs/320/twitter/322/nerd-face_1f913.png" style="width: 50px; heigth: 50px" class="m-3" alt="nerd">
@@ -23,9 +23,28 @@
             </div>
         </div>
     </div>
-    <div style="height: 100%; width: 25%; position: absolute; top: 0; right: 0;">
-        <div style="height: 95%" class="shadow-none p-3 m-3 bg-light rounded">
-            
+    <div style="height: 100%; width: 25%; position: absolute; top: 0; right: 0;" class="p-3">
+        <div style="height: 100%" class="shadow-none p-3 bg-light rounded">
+            <div style="height: 50%; overflow: auto">
+                {#each n as i}
+                <div class="mb-1 bg-body rounded" style="width: 100%">
+                    <img src="https://em-content.zobj.net/thumbs/320/twitter/322/nerd-face_1f913.png" style="width: 20px; heigth: 20px" class="m-3" alt="nerd">
+                    <p style="display: inline" class="">Nerd</p>
+                </div>
+                {/each}
+            </div>
+            <div style="height: 50%; overflow: auto">
+                <div class="bg-body rounded" style="width: 100%">
+                    {#each n as i}
+                        <div class="mb-1" style="width: 100%">
+                            <img src="https://em-content.zobj.net/thumbs/320/twitter/322/nerd-face_1f913.png" style="width: 20px; heigth: 20px" class="m-3" alt="nerd">
+                            <p style="display: inline" class="">Ahh</p>
+                        </div>
+                    {/each}
+                    <textarea class="form-control" style="height: 20px"></textarea>
+                    <button class="form-control btn btn-primary" style="">Enviar</button>
+                </div>
+            </div>
         </div>
     </div>
 </main>
