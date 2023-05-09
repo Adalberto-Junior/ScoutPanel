@@ -29,8 +29,9 @@
                                 <div class="mb-3">
                                     <textarea
                                         class="form-control"
-                                        placeholder="Escrever publicação..."
+                                        id="exampleFormControlTextarea1"
                                         rows="3"
+                                        placeholder="Escreva algo..."
                                     />
                                 </div>
                                 <div
@@ -229,5 +230,16 @@
 
     .hide-scrollbar::-webkit-scrollbar {
         display: none;
+    }
+
+    textarea {
+        resize: none;
+        height: auto;
+        overflow-y: hidden;
+    }
+
+    textarea:active,
+    textarea:focus {
+        outline: none;
     }
 </style>

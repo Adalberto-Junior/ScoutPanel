@@ -47,7 +47,11 @@
 
         <div class="mb-3">
           <label for="aboutme" class="form-label">Biografia</label>
-          <textarea class="form-control" id="aboutme" rows="3" />
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            rows="3"
+          />
         </div>
 
         <div id="app">
@@ -144,5 +148,16 @@
     display: flex;
     height: 200px;
     width: 200px;
+  }
+
+  textarea {
+    resize: none;
+    height: auto;
+    overflow-y: hidden;
+  }
+
+  textarea:active,
+  textarea:focus {
+    outline: none;
   }
 </style>
