@@ -3,6 +3,7 @@
     export let name;
 
     const id = `collapse${index}`;
+    const innerId = `collapseInner${index}`;
 </script>
 
 <div class="accordion-item">
@@ -47,6 +48,61 @@
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div class="accordion" id="xd">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="asd">
+                        <button
+                            class="accordion-button"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#qweqwe"
+                            aria-expanded="false"
+                            aria-controls="qweqwe"
+                        >
+                            Pagamentos
+                        </button>
+                    </h2>
+                    <div
+                        id="qweqwe"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="asd"
+                        data-bs-parent="#xd"
+                    >
+                        <div class="accordion-body">
+                            <ul class="list-group ">
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                  <div class="ms-2 me-auto">
+                                    <div class="fw-bold">Dívida trimestral Q1</div>
+                                    Pago a 21/03.
+                                  </div>
+                                  <span class="badge bg-success rounded-pill">24.99€</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                  <div class="ms-2 me-auto">
+                                    <div class="fw-bold">Dívida trimestral Q2</div>
+                                    Dívida a pagar até 30/06.
+                                  </div>
+                                  <span class="badge bg-danger rounded-pill">24.99€</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                  <div class="ms-2 me-auto">
+                                    <div class="fw-bold">Dívida trimestral Q3</div>
+                                    Dívida a pagar até 30/09.
+                                  </div>
+                                  <span class="badge bg-danger rounded-pill">24.99€</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                      <div class="fw-bold">Dívida trimestral Q4</div>
+                                      Dívida a pagar até 31/12.
+                                    </div>
+                                    <span class="badge bg-danger rounded-pill">24.99€</span>
+                                  </li>
+                              </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
