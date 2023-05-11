@@ -24,11 +24,14 @@
 
     let filteredNames = names;
 
-    let searchTerm = "";
     function handleSearch(value) {
-        searchTerm = value.toLowerCase();
+        let searchTerm = value.trim().toLowerCase();
         filteredNames = names.filter((name) =>
-            name.toLowerCase().includes(searchTerm)
+            name
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "")
+                .toLowerCase()
+                .includes(searchTerm)
         );
     }
 </script>
