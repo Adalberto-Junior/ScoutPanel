@@ -15,6 +15,9 @@
   },
   "dependencies": {
     "bootstrap": "^5.2.3",
-    "bootstrap-icons": "^1.10.5"
+    "bootstrap-icons": "^1.10.5",
+    "framework7-svelte": "^8.0.5",
+    "skeleton-elements": "^4.0.1",
+    "svelte-quicksearch-bar": "^1.0.5"
   }
 }

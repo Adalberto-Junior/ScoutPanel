@@ -1,6 +1,7 @@
 <script>
     import Accordion from "./Accordion.svelte";
-    let names = [
+    import SearchBar from "./SearchBar.svelte";
+    export let names = [
         "Marco António Alves Almeida",
         "Daniel Alexandre Martins da Silva",
         "Adalberto Júnior Trindade Vaz do Rosário",
@@ -20,14 +21,27 @@
         "Diogo Branco Silva",
         "Bruno Ferreira Gomes",
     ];
+
+    let filteredNames = names;
+
+    let searchTerm = "";
+    function handleSearch(value) {
+        searchTerm = value.toLowerCase();
+        filteredNames = names.filter((name) =>
+            name.toLowerCase().includes(searchTerm)
+        );
+    }
 </script>
 
 <main>
     <div class="shadow-none p-3 m-3 bg-light rounded">
         <h2 align="center">Lista de Membros</h2>
-        <div class="accordion" id="accordionExample">
-            {#each names as name, index}
-                <Accordion {index} {name} />
+        <SearchBar onSearch={handleSearch} />
+        <div class="faq-list">
+            {#each filteredNames as person, index}
+                <div class="accordion" id="accordionExample">
+                    <Accordion {index} name={person} />
+                </div>
             {/each}
         </div>
     </div>
