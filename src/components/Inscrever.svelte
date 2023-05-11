@@ -1,6 +1,7 @@
 <script>
     let avatar, fileinput;
-
+    import { nameList } from "./MemberList.svelte";
+    let newMemberName = "";
     const onFileSelected = (e) => {
         let image = e.target.files[0];
         let reader = new FileReader();
@@ -9,13 +10,24 @@
             avatar = e.target.result;
         };
     };
+
+    function signup() {
+        console.log(newMemberName);
+        nameList.push(newMemberName);
+        console.log(nameList);
+    }
 </script>
 
 <main>
     <div class="shadow-none p-3 m-3 bg-light rounded">
         <h2 align="center">Formulário de inscrição</h2>
         <label for="nome" class="form-label">Nome Completo</label>
-        <input type="text" class="form-control" id="nome" />
+        <input
+            bind:value={newMemberName}
+            type="text"
+            class="form-control"
+            id="nome"
+        />
 
         <div class="mb-3">
             <label for="morada" class="form-label">Morada</label>
@@ -89,6 +101,7 @@
                 </div>
                 <!-- Button trigger modal -->
                 <button
+                    on:click={signup}
                     type="button"
                     class="btn btn-primary"
                     data-bs-toggle="modal"

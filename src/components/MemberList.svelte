@@ -1,7 +1,5 @@
-<script>
-    import Accordion from "./Accordion.svelte";
-    import SearchBar from "./SearchBar.svelte";
-    export let names = [
+<script context="module">
+    export const nameList = [
         "Marco António Alves Almeida",
         "Daniel Alexandre Martins da Silva",
         "Adalberto Júnior Trindade Vaz do Rosário",
@@ -21,12 +19,17 @@
         "Diogo Branco Silva",
         "Bruno Ferreira Gomes",
     ];
+</script>
 
-    let filteredNames = names;
+<script>
+    import Accordion from "./Accordion.svelte";
+    import SearchBar from "./SearchBar.svelte";
+
+    let filteredNames = nameList;
 
     function handleSearch(value) {
         let searchTerm = value.trim().toLowerCase();
-        filteredNames = names.filter((name) =>
+        filteredNames = nameList.filter((name) =>
             name
                 .normalize("NFD")
                 .replace(/[\u0300-\u036f]/g, "")
