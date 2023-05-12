@@ -1,5 +1,8 @@
 <script>
     var n = [1, 1, 1, 1, 1, 1, 1, 1, 1];
+    function openFileExplorer() {
+    document.getElementById("file-input").click();
+  }
 </script>
 
 <main>
@@ -40,11 +43,14 @@
                                     <div class="d-flex">
                                         <button
                                             type="button"
+                                            on:click={openFileExplorer}
                                             class="btn btn-link"
                                             ><i
                                                 class="bi bi-image-fill"
                                             /></button
                                         >
+                                        <input type="file" id="file-input" style="display: none" accept="image/png, image/jpeg, video/mp4 ,video/x-m4v, video/*"
+                                        multiple>
                                         <button
                                             type="button"
                                             class="btn btn-link"

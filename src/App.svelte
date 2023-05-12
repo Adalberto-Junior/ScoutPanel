@@ -1,7 +1,6 @@
 <script>
     import Home from "./components/Home.svelte";
     import Admin from "./components/Admin.svelte";
-
     var main_tab = "home";
     let admin_mode = true;
     let textSelected = "text";
@@ -11,7 +10,7 @@
     <div
         style="height: 100%; width: 20%; position: absolute; top: 0; left: 0; overflow: auto"
     >
-        <div class="shadow-none p-3 m-3  rounded">
+        <div class="shadow-none p-3 m-3 rounded">
             <a
                 href="#"
                 class="nav-link"
@@ -28,7 +27,7 @@
                 > <strong>Scout Panel</strong>
             </a>
         </div>
-        
+
         <div class="shadow-none p-3 m-3 bg-light rounded">
             <a
                 href="#"
@@ -118,6 +117,7 @@
                 </a>
             </div>
         {/if}
+        <div class="shadow-none p-3 m-3 rounded" />
         <div class="shadow-none p-3 m-3 text-bg-primary rounded">
             <a
                 href="#"
@@ -226,7 +226,7 @@
                 {#if textSelected == "media"}
                     <div class="mb-3">
                         <label for="formFile" class="form-label"
-                            >Arrastar ou <strong>submeter</strong> imagens/videos</label
+                            >Arrastar ou submeter imagens/videos</label
                         >
                         <input
                             class="form-control"
