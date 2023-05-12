@@ -1,4 +1,10 @@
 <script>
+    import {admin_tab} from '../stores/stores.js'
+    let _admin_tab;
+	admin_tab.subscribe(value => {
+		_admin_tab = value;
+	});
+    
     let avatar, fileinput;
     import { nameList } from "./MemberList.svelte";
     let newMemberName = "";
@@ -142,6 +148,7 @@
                                     type="button"
                                     data-bs-dismiss="modal"
                                     class="btn btn-primary"
+                                    on:click={()=>admin_tab.update(()=>"lista")}
                                     >Ver lista de membros</button
                                 >
                                 <!-- TODO: Meter este botao a dar redirect para a lista de membros -->
