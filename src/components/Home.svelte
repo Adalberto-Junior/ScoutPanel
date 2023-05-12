@@ -33,7 +33,7 @@
                                 <!-- This div will take up 10% of the left space -->
                                 <div>
                                     <img
-                                        src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png"
+                                        src="static/default_avatar.png"
                                         style="width: 50px; heigth: 50px"
                                         class="m-1"
                                         alt="user"
@@ -108,7 +108,7 @@
                 {#each n as i}
                     <div class="p-3 mt-3 bg-body rounded" style="width: 100%">
                         <img
-                            src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png"
+                            src="static/default_avatar.png"
                             style="width: 50px; heigth: 50px"
                             class="m-3"
                             alt="user"
@@ -156,7 +156,7 @@
                     {#each n as i}
                         <div class="mb-1 bg-body" style="width: 100%">
                             <img
-                                src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png"
+                                src="static/default_avatar.png"
                                 style="width: 20px; heigth: 20px"
                                 class="m-3"
                                 alt="user"

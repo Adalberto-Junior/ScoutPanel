@@ -25,7 +25,7 @@
     function signup() {
         if (!avatar) {
             avatar =
-                "https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png";
+                "static/default_avatar.png";
         }
         nameList.push({
             name: newMemberName,
@@ -102,14 +102,14 @@
             {:else}
                 <img
                     class="avatar"
-                    src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png"
+                    src="static/default_avatar.png"
                     alt="Default Avatar"
                 />
             {/if}
             <input
                 type="image"
                 class="upload"
-                src="https://static.thenounproject.com/png/625182-200.png"
+                src="static/camera.png"
                 alt="Submeter imagem"
                 on:click={() => {
                     fileinput.click();
