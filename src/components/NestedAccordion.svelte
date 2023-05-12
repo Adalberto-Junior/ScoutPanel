@@ -1,6 +1,6 @@
 <script>
     export let index;
-    export let name;
+    export let person;
 
     const id = `${index}`;
     const innerId = `inner${index}`;
@@ -27,11 +27,11 @@
                 aria-controls="collapse{id}"
             >
                 <img
-                    src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png"
+                    src={person.image}
                     style="width: 50px; height: 50px"
                     alt=""
                 />
-                {name}
+                <div class="m-2">{person.name}</div>
             </button>
         </h2>
         <div
@@ -45,16 +45,16 @@
                     <table class="table table-borderless">
                         <tbody>
                             <tr>
-                                <td>Morada</td>
-                                <td>Telemóvel/Telefone</td>
-                                <td>Endereço de Email</td>
+                                <td>{person.address}</td>
+                                <td>{person.phoneNumber}</td>
+                                <td>{person.email}</td>
                             </tr>
                             <tr>
-                                <td>Data de nascimento</td>
-                                <td>Sexo</td>
+                                <td>{person.birthDate}</td>
+                                <td>{person.sex}</td>
                             </tr>
                             <tr>
-                                <td>Uma Biografia muito muito muito longa</td>
+                                <td>{person.bio}</td>
                             </tr>
                         </tbody>
                     </table>

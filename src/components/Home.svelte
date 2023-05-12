@@ -1,8 +1,21 @@
 <script>
+    import Contact from "./Contact.svelte";
     var n = [1, 1, 1, 1, 1, 1, 1, 1, 1];
     function openFileExplorer() {
-    document.getElementById("file-input").click();
-  }
+        document.getElementById("file-input").click();
+    }
+    const chatNames = [
+        "Marco Almeida",
+        "Daniel Silva",
+        "Adalberto Rosário",
+        "Maria Nunes",
+        "João Rosa",
+        "Ana Mota",
+        "João Paz",
+        "Luis Azevedo",
+        "Gustavo Teixeira",
+    ];
+    import { nameList } from "./MemberList.svelte";
 </script>
 
 <main>
@@ -49,8 +62,13 @@
                                                 class="bi bi-image-fill"
                                             /></button
                                         >
-                                        <input type="file" id="file-input" style="display: none" accept="image/png, image/jpeg, video/mp4 ,video/x-m4v, video/*"
-                                        multiple>
+                                        <input
+                                            type="file"
+                                            id="file-input"
+                                            style="display: none"
+                                            accept="image/png, image/jpeg, video/mp4 ,video/x-m4v, video/*"
+                                            multiple
+                                        />
                                         <button
                                             type="button"
                                             class="btn btn-link"
@@ -122,93 +140,21 @@
         class="p-3"
     >
         <div style="height: 100%" class="shadow-none p-3 bg-light rounded">
-            <div style="height: 50%; overflow: auto">
-                <div class="mb-1 bg-body rounded" style="width: 100%">
-                    <img
-                        src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png"
-                        style="width: 20px; heigth: 20px"
-                        class="m-3"
-                        alt="user"
-                    />
-                    <p style="display: inline" class="">Marco Almeida</p>
-                </div>
-                <div class="mb-1 bg-body rounded" style="width: 100%">
-                    <img
-                        src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png"
-                        style="width: 20px; heigth: 20px"
-                        class="m-3"
-                        alt="user"
-                    />
-                    <p style="display: inline" class="">Daniel Silva</p>
-                </div>
-                <div class="mb-1 bg-body rounded" style="width: 100%">
-                    <img
-                        src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png"
-                        style="width: 20px; heigth: 20px"
-                        class="m-3"
-                        alt="user"
-                    />
-                    <p style="display: inline" class="">Adalberto Rosário</p>
-                </div>
-                <div class="mb-1 bg-body rounded" style="width: 100%">
-                    <img
-                        src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png"
-                        style="width: 20px; heigth: 20px"
-                        class="m-3"
-                        alt="user"
-                    />
-                    <p style="display: inline" class="">Maria Nunes</p>
-                </div>
-                <div class="mb-1 bg-body rounded" style="width: 100%">
-                    <img
-                        src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png"
-                        style="width: 20px; heigth: 20px"
-                        class="m-3"
-                        alt="user"
-                    />
-                    <p style="display: inline" class="">João Rosa</p>
-                </div>
-                <div class="mb-1 bg-body rounded" style="width: 100%">
-                    <img
-                        src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png"
-                        style="width: 20px; heigth: 20px"
-                        class="m-3"
-                        alt="user"
-                    />
-                    <p style="display: inline" class="">Ana Mota</p>
-                </div>
-                <div class="mb-1 bg-body rounded" style="width: 100%">
-                    <img
-                        src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png"
-                        style="width: 20px; heigth: 20px"
-                        class="m-3"
-                        alt="user"
-                    />
-                    <p style="display: inline" class="">João Paz</p>
-                </div>
-                <div class="mb-1 bg-body rounded" style="width: 100%">
-                    <img
-                        src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png"
-                        style="width: 20px; heigth: 20px"
-                        class="m-3"
-                        alt="user"
-                    />
-                    <p style="display: inline" class="">Luis Azevedo</p>
-                </div>
-                <div class="mb-1 bg-body rounded" style="width: 100%">
-                    <img
-                        src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png"
-                        style="width: 20px; heigth: 20px"
-                        class="m-3"
-                        alt="user"
-                    />
-                    <p style="display: inline" class="">Gustavo Teixeira</p>
-                </div>
+            <div
+                style="height: 50%; overflow: auto"
+                class="shadow-none m-1 rounded"
+            >
+                {#each nameList as chatName}
+                    <Contact person={chatName} />
+                {/each}
             </div>
-            <div style="height: 50%; overflow: auto">
-                <div class="bg-body rounded" style="width: 100%">
+            <div
+                style="height: 50%; overflow: auto"
+                class="shadow-none m-1 rounded"
+            >
+                <div>
                     {#each n as i}
-                        <div class="mb-1" style="width: 100%">
+                        <div class="mb-1 bg-body" style="width: 100%">
                             <img
                                 src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png"
                                 style="width: 20px; heigth: 20px"
@@ -219,8 +165,9 @@
                         </div>
                     {/each}
                     <textarea class="form-control" style="height: 20px" />
-                    <button class="form-control btn btn-primary" style=""
-                        >Enviar</button
+                    <button
+                        class="form-control btn btn-primary"
+                        style="height: 1%;">Enviar</button
                     >
                 </div>
             </div>

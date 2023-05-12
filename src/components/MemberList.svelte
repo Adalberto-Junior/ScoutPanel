@@ -1,23 +1,185 @@
 <script context="module">
     export const nameList = [
-        "Marco António Alves Almeida",
-        "Daniel Alexandre Martins da Silva",
-        "Adalberto Júnior Trindade Vaz do Rosário",
-        "Maria Julia Nunes",
-        "João Vitor da Rosa",
-        "Ana Lídia da Mota",
-        "João Guilherme da Paz",
-        "Luis Gustavo Azevedo",
-        "Gustavo Henrique Teixeira",
-        "Maria Clara Barros",
-        "Pedro Lucas da Rosa",
-        "João Miguel da Rocha",
-        "Vitor Gabriel Nascimento",
-        "Ana Laura Barros",
-        "Alexandre Tomás Rodrigues",
-        "Bernardo Gonçalves",
-        "Diogo Branco Silva",
-        "Bruno Ferreira Gomes",
+        {
+            name: "Marco António Alves Almeida",
+            address: "Morada",
+            phoneNumber: "Telemovel/Telefone",
+            email: "Endereço de Email",
+            birthDate: "Data de nascimento",
+            sex: "Masculino/Feminino/Outro",
+            bio: "Uma biografia muito longa.",
+            image: "https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png",
+        },
+        {
+            name: "Daniel Alexandre Martins da Silva",
+            address: "Morada",
+            phoneNumber: "Telemovel/Telefone",
+            email: "Endereço de Email",
+            birthDate: "Data de nascimento",
+            sex: "Masculino/Feminino/Outro",
+            bio: "Uma biografia muito longa",
+            image: "https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png",
+        },
+        {
+            name: "Adalberto Júnior Trindade Vaz do Rosário",
+            address: "Morada",
+            phoneNumber: "Telemovel/Telefone",
+            email: "Endereço de Email",
+            birthDate: "Data de nascimento",
+            sex: "Masculino/Feminino/Outro",
+            bio: "Uma biografia muito longa",
+            image: "https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png",
+        },
+        {
+            name: "Maria Julia Nunes",
+            address: "Morada",
+            phoneNumber: "Telemovel/Telefone",
+            email: "Endereço de Email",
+            birthDate: "Data de nascimento",
+            sex: "Masculino/Feminino/Outro",
+            bio: "Uma biografia muito longa.",
+            image: "https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png",
+        },
+        {
+            name: "João Vitor da Rosa",
+            address: "Morada",
+            phoneNumber: "Telemovel/Telefone",
+            email: "Endereço de Email",
+            birthDate: "Data de nascimento",
+            sex: "Masculino/Feminino/Outro",
+            bio: "Uma biografia muito longa.",
+            image: "https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png",
+        },
+        {
+            name: "Ana Lídia da Mota",
+            address: "Morada",
+            phoneNumber: "Telemovel/Telefone",
+            email: "Endereço de Email",
+            birthDate: "Data de nascimento",
+            sex: "Masculino/Feminino/Outro",
+            bio: "Uma biografia muito longa.",
+            image: "https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png",
+        },
+        {
+            name: "João Guilherme da Paz",
+            address: "Morada",
+            phoneNumber: "Telemovel/Telefone",
+            email: "Endereço de Email",
+            birthDate: "Data de nascimento",
+            sex: "Masculino/Feminino/Outro",
+            bio: "Uma biografia muito longa.",
+            image: "https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png",
+        },
+        {
+            name: "Luis Gustavo Azevedo",
+            address: "Morada",
+            phoneNumber: "Telemovel/Telefone",
+            email: "Endereço de Email",
+            birthDate: "Data de nascimento",
+            sex: "Masculino/Feminino/Outro",
+            bio: "Uma biografia muito longa.",
+            image: "https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png",
+        },
+        {
+            name: "Gustavo Henrique Teixeira",
+            address: "Morada",
+            phoneNumber: "Telemovel/Telefone",
+            email: "Endereço de Email",
+            birthDate: "Data de nascimento",
+            sex: "Masculino/Feminino/Outro",
+            bio: "Uma biografia muito longa.",
+            image: "https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png",
+        },
+        {
+            name: "Maria Clara Barros",
+            address: "Morada",
+            phoneNumber: "Telemovel/Telefone",
+            email: "Endereço de Email",
+            birthDate: "Data de nascimento",
+            sex: "Masculino/Feminino/Outro",
+            bio: "Uma biografia muito longa.",
+            image: "https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png",
+        },
+        {
+            name: "Pedro Lucas da Rosa",
+            address: "Morada",
+            phoneNumber: "Telemovel/Telefone",
+            email: "Endereço de Email",
+            birthDate: "Data de nascimento",
+            sex: "Masculino/Feminino/Outro",
+            bio: "Uma biografia muito longa.",
+            image: "https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png",
+        },
+        {
+            name: "João Miguel da Rocha",
+            address: "Morada",
+            phoneNumber: "Telemovel/Telefone",
+            email: "Endereço de Email",
+            birthDate: "Data de nascimento",
+            sex: "Masculino/Feminino/Outro",
+            bio: "Uma biografia muito longa.",
+            image: "https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png",
+        },
+        {
+            name: "Vitor Gabriel Nascimento",
+            address: "Morada",
+            phoneNumber: "Telemovel/Telefone",
+            email: "Endereço de Email",
+            birthDate: "Data de nascimento",
+            sex: "Masculino/Feminino/Outro",
+            bio: "Uma biografia muito longa.",
+            image: "https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png",
+        },
+        {
+            name: "Ana Laura Barros",
+            address: "Morada",
+            phoneNumber: "Telemovel/Telefone",
+            email: "Endereço de Email",
+            birthDate: "Data de nascimento",
+            sex: "Masculino/Feminino/Outro",
+            bio: "Uma biografia muito longa.",
+            image: "https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png",
+        },
+        {
+            name: "Alexandre Tomás Rodrigues",
+            address: "Morada",
+            phoneNumber: "Telemovel/Telefone",
+            email: "Endereço de Email",
+            birthDate: "Data de nascimento",
+            sex: "Masculino/Feminino/Outro",
+            bio: "Uma biografia muito longa.",
+            image: "https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png",
+        },
+        {
+            name: "Bernardo Gonçalves",
+            address: "Morada",
+            phoneNumber: "Telemovel/Telefone",
+            email: "Endereço de Email",
+            birthDate: "Data de nascimento",
+            sex: "Masculino/Feminino/Outro",
+            bio: "Uma biografia muito longa.",
+            image: "https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png",
+        },
+        {
+            name: "Diogo Branco Silva",
+            address: "Morada",
+            phoneNumber: "Telemovel/Telefone",
+            email: "Endereço de Email",
+            birthDate: "Data de nascimento",
+            sex: "Masculino/Feminino/Outro",
+            bio: "Uma biografia muito longa.",
+            image: "https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png",
+        },
+        {
+            name: "Bruno Ferreira Gomes",
+            address: "Morada",
+            phoneNumber: "Telemovel/Telefone",
+            email: "Endereço de Email",
+            birthDate: "Data de nascimento",
+            sex: "Masculino/Feminino/Outro",
+            bio: "Uma biografia muito longa.",
+            image: "https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png",
+        },
     ];
 </script>
 
@@ -29,7 +191,7 @@
 
     function handleSearch(value) {
         let searchTerm = value.trim().toLowerCase();
-        filteredNames = nameList.filter((name) =>
+        filteredNames = nameList.filter(({ name }) =>
             name
                 .normalize("NFD")
                 .replace(/[\u0300-\u036f]/g, "")
@@ -45,7 +207,9 @@
         <SearchBar onSearch={handleSearch} />
         <div class="faq-list">
             {#each filteredNames as person, index}
-                <NestedAccordion {index} name={person} />
+                <div class="m-1">
+                    <NestedAccordion {index} {person} />
+                </div>
             {/each}
         </div>
     </div>
