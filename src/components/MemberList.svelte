@@ -22,7 +22,7 @@
 </script>
 
 <script>
-    import Accordion from "./Accordion.svelte";
+    import NestedAccordion from "./NestedAccordion.svelte";
     import SearchBar from "./SearchBar.svelte";
 
     let filteredNames = nameList;
@@ -45,9 +45,7 @@
         <SearchBar onSearch={handleSearch} />
         <div class="faq-list">
             {#each filteredNames as person, index}
-                <div class="accordion" id="accordionExample">
-                    <Accordion {index} name={person} />
-                </div>
+                <NestedAccordion {index} name={person} />
             {/each}
         </div>
     </div>
