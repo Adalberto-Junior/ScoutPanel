@@ -11,7 +11,6 @@
 
 <main>
     <div style="height: 100%; width: 25%; position: absolute; top: 0; left: 0;">
-        <div class="shadow-none p-3 mt-3 mb-3 mw-3 bg-light rounded"><a href="#" class="nav-link" style="display: block" on:click={()=>admin_tab.update(()=>"admin")}>Administração</a></div>
         <div class="shadow-none p-3 mt-3 mb-3 mw-3 text-bg-success rounded"><a href="#" class="nav-link" style="display: block" on:click={()=>admin_tab.update(()=>"lista")}>Lista de membros</a></div>
         <div class="shadow-none p-3 mt-3 mb-3 mw-3 text-bg-success rounded"><a href="#" class="nav-link" style="display: block" on:click={()=>admin_tab.update(()=>"inscrever")}>Inscrever novo membro</a></div>
         <div class="shadow-none p-3 mt-3 mb-3 mw-3 bg-light rounded"><a href="#" class="nav-link" style="display: block" on:click={()=>admin_tab.update(()=>"pedidos")}>Pedidos de requerimentos</a></div>

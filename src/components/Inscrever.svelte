@@ -148,7 +148,7 @@
                                     type="button"
                                     data-bs-dismiss="modal"
                                     class="btn btn-primary"
-                                    on:click={()=>admin_tab.update(()=>"lista")}
+                                    on:click={()=>admin_tab.update(()=>"pedidos")}
                                     >Ver lista de membros</button
                                 >
                                 <!-- TODO: Meter este botao a dar redirect para a lista de membros -->
