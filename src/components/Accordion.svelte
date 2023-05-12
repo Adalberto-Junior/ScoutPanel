@@ -73,29 +73,25 @@
                             <ul class="list-group ">
                                 <li class="list-group-item d-flex justify-content-between align-items-start">
                                   <div class="ms-2 me-auto">
-                                    <div class="fw-bold">Dívida trimestral Q1</div>
-                                    Pago a 21/03.
+                                    <div class=""><strong>Dívida trimestral Q1 - </strong>Pago a 21/03</div>
                                   </div>
                                   <span class="badge bg-success rounded-pill">24.99€</span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-start">
                                   <div class="ms-2 me-auto">
-                                    <div class="fw-bold">Dívida trimestral Q2</div>
-                                    Dívida a pagar até 30/06.
+                                    <div class=""><strong>Dívida trimestral Q2 - </strong>Pago a 30/06</div>
                                   </div>
                                   <span class="badge bg-danger rounded-pill">24.99€</span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-start">
                                   <div class="ms-2 me-auto">
-                                    <div class="fw-bold">Dívida trimestral Q3</div>
-                                    Dívida a pagar até 30/09.
+                                    <div class=""><strong>Dívida trimestral Q3 - </strong>Pago a 30/09</div>
                                   </div>
                                   <span class="badge bg-danger rounded-pill">24.99€</span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-start">
                                     <div class="ms-2 me-auto">
-                                      <div class="fw-bold">Dívida trimestral Q4</div>
-                                      Dívida a pagar até 31/12.
+                                        <div class=""><strong>Dívida trimestral Q4 - </strong>Pago a 31/12</div>
                                     </div>
                                     <span class="badge bg-danger rounded-pill">24.99€</span>
                                   </li>
