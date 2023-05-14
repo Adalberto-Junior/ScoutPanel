@@ -1,6 +1,10 @@
 <script>
+// @ts-nocheck
+
     import Home from "./components/Home.svelte";
     import Admin from "./components/Admin.svelte";
+    import NestedAccordion from "./components/NestedAccordion.svelte";
+    import Pagamento from "./components/Pagamento.svelte";
     var main_tab = "home";
     let admin_mode = true;
     let textSelected = "text";
@@ -177,6 +181,8 @@
             <Home />
         {:else if main_tab == "admin"}
             <Admin />
+      {:else if main_tab == "pagamentos"}
+            <Pagamento/> 
         {/if}
     </div>
 </main>
