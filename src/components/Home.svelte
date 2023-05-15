@@ -67,7 +67,9 @@
                                             ><i
                                                 class="bi bi-image-fill"
                                             />
-                                            {fileCount}
+                                            {#if fileCount>0}
+                                                {fileCount}
+                                            {/if}
                                             </button
                                         >
                                         <input
@@ -113,34 +115,57 @@
                         </div>
                     </div>
                 </div>
-
-                {#each n as i}
-                    <div class="p-3 mt-3 bg-body rounded" style="width: 100%">
-                        <img
-                            src="static/default_avatar.png"
-                            style="width: 50px; heigth: 50px"
-                            class="m-3"
-                            alt="user"
-                        />
-                        <h5 style="display: inline" class="">User</h5>
-                        <p class="m-3">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi ut aliquip
-                            ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate velit esse cillum dolore
-                            eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia
-                            deserunt mollit anim id est laborum.
-                        </p>
-                        <img
-                            src="https://i.kym-cdn.com/entries/icons/original/000/039/761/nerdfacecover.jpg"
-                            style="width: 100%"
-                            alt="nerd"
-                        />
-                    </div>
-                {/each}
+                <div class="p-3 mt-3 bg-body rounded" style="width: 100%">
+                    <img
+                        src="static/default_avatar.png"
+                        style="width: 50px; heigth: 50px"
+                        class="m-3"
+                        alt="user"
+                    />
+                    <h5 style="display: inline" class="">Manel Escuteiro</h5>
+                    <p class="m-3">
+                        Grande dia!
+                    </p>
+                    <img
+                        src="https://flordelis.escutismo.pt/wp-content/uploads/sites/2/2021/01/porque-contratar-uma-pessoa-que-tenha-sido-escuteira.jpg"
+                        style="width: 100%"
+                        alt="nerd"
+                    />
+                </div>
+                <div class="p-3 mt-3 bg-body rounded" style="width: 100%">
+                    <img
+                        src="static/default_avatar.png"
+                        style="width: 50px; heigth: 50px"
+                        class="m-3"
+                        alt="user"
+                    />
+                    <h5 style="display: inline" class="">João Escuteiro</h5>
+                    <p class="m-3">
+                        A melhor foto que tiramos há duas semanas!
+                    </p>
+                    <img
+                        src="https://escutismo.pt/img/full/dirigentes_161122022331_lisboa.jpg"
+                        style="width: 100%"
+                        alt=""
+                    />
+                </div>
+                <div class="p-3 mt-3 bg-body rounded" style="width: 100%">
+                    <img
+                        src="static/default_avatar.png"
+                        style="width: 50px; heigth: 50px"
+                        class="m-3"
+                        alt="user"
+                    />
+                    <h5 style="display: inline" class="">Zé Escuteiro</h5>
+                    <p class="m-3">
+                        Foto de grupo de ontém!
+                    </p>
+                    <img
+                        src="https://agencia.ecclesia.pt/portal/wp-content/uploads/2018/04/Escutismo.jpg"
+                        style="width: 100%"
+                        alt=""
+                    />
+                </div>
             </div>
         </div>
     </div>
@@ -162,17 +187,18 @@
                 class="shadow-none m-1 rounded"
             >
                 <div>
-                    {#each n as i}
-                        <div class="mb-1 bg-body" style="width: 100%">
-                            <img
-                                src="static/default_avatar.png"
-                                style="width: 20px; heigth: 20px"
-                                class="m-3"
-                                alt="user"
-                            />
-                            <p style="display: inline" class="">Ahh</p>
-                        </div>
-                    {/each}
+                    <div class="mb-1 p-3 bg-body" style="width: 100%">
+                    <p style="display: inline" class="">Vais a alguma atividade no próximo mês?</p>
+                    </div>
+                    <div class="mb-1 p-3 bg-body" style="width: 100%; text-align: right">
+                    <p style="display: inline" class="">Acho que só vou a uma</p>
+                    </div><div class="mb-1 p-3 bg-body" style="width: 100%">
+                    <p style="display: inline" class="">Qual?</p>
+                    </div><div class="mb-1 p-3 bg-body" style="width: 100%; text-align: right">
+                    <p style="display: inline" class="">Dia 26</p>
+                    </div><div class="mb-1 p-3 bg-body" style="width: 100%">
+                    <p style="display: inline" class="">Vemo-nos lá então!!</p>
+                    </div>
                     <textarea class="form-control" style="height: 20px" />
                     <button
                         class="form-control btn btn-primary"
