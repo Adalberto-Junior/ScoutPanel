@@ -1,6 +1,12 @@
 <script>
     import Contact from "./Contact.svelte";
     var n = [1, 1, 1, 1, 1, 1, 1, 1, 1];
+    var files;
+    var fileCount = 0;
+    $: if (files) {
+        fileCount = files.length;
+	}
+    
     function openFileExplorer() {
         document.getElementById("file-input").click();
     }
@@ -60,9 +66,12 @@
                                             class="btn btn-link"
                                             ><i
                                                 class="bi bi-image-fill"
-                                            /></button
+                                            />
+                                            {fileCount}
+                                            </button
                                         >
                                         <input
+                                            bind:files
                                             type="file"
                                             id="file-input"
                                             style="display: none"
