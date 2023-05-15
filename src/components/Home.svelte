@@ -3,13 +3,20 @@
     var n = [1, 1, 1, 1, 1, 1, 1, 1, 1];
     var files;
     var fileCount = 0;
+    let postText = "";
     $: if (files) {
         fileCount = files.length;
-	}
-    
+    }
+
     function openFileExplorer() {
         document.getElementById("file-input").click();
     }
+
+    function publishPost() {
+        files = [];
+        postText = "";
+    }
+
     const chatNames = [
         "Marco Almeida",
         "Daniel Silva",
@@ -50,6 +57,7 @@
                                 <!-- The main content of the card-body goes here -->
                                 <div class="mb-3">
                                     <textarea
+                                        bind:value={postText}
                                         class="form-control"
                                         id="exampleFormControlTextarea1"
                                         rows="3"
@@ -64,14 +72,11 @@
                                             type="button"
                                             on:click={openFileExplorer}
                                             class="btn btn-link"
-                                            ><i
-                                                class="bi bi-image-fill"
-                                            />
-                                            {#if fileCount>0}
+                                            ><i class="bi bi-image-fill" />
+                                            {#if fileCount > 0}
                                                 {fileCount}
                                             {/if}
-                                            </button
-                                        >
+                                        </button>
                                         <input
                                             bind:files
                                             type="file"
@@ -107,8 +112,9 @@
                                             ></button
                                         >
                                     </div>
-                                    <button class="btn btn-primary"
-                                        >Publicar</button
+                                    <button
+                                        class="btn btn-primary"
+                                        on:click={publishPost}>Publicar</button
                                     >
                                 </div>
                             </div>
@@ -123,9 +129,7 @@
                         alt="user"
                     />
                     <h5 style="display: inline" class="">Manel Escuteiro</h5>
-                    <p class="m-3">
-                        Grande dia!
-                    </p>
+                    <p class="m-3">Grande dia!</p>
                     <img
                         src="https://flordelis.escutismo.pt/wp-content/uploads/sites/2/2021/01/porque-contratar-uma-pessoa-que-tenha-sido-escuteira.jpg"
                         style="width: 100%"
@@ -149,6 +153,7 @@
                         alt=""
                     />
                 </div>
+
                 <div class="p-3 mt-3 bg-body rounded" style="width: 100%">
                     <img
                         src="static/default_avatar.png"
@@ -157,9 +162,7 @@
                         alt="user"
                     />
                     <h5 style="display: inline" class="">Zé Escuteiro</h5>
-                    <p class="m-3">
-                        Foto de grupo de ontém!
-                    </p>
+                    <p class="m-3">Foto de grupo de ontém!</p>
                     <img
                         src="https://agencia.ecclesia.pt/portal/wp-content/uploads/2018/04/Escutismo.jpg"
                         style="width: 100%"
@@ -174,47 +177,56 @@
         class="p-3"
     >
         <div style="height: 100%" class="shadow-none p-3 bg-light rounded">
-            <div
-                style="height: 50%"
-                class="shadow-none m-1 rounded"
-            >
-            <div class="mb-3" style="text-align: center">
-                <h5><b>Contactos</b></h5>
-            </div>
-            <div style="height: 85%; overflow: auto">
-                {#each nameList as chatName}
-                    <Contact person={chatName} />
-                {/each}
-            </div>
-            </div>
-            <div
-                style="height: 50%"
-                class="shadow-none m-1 rounded"
-            >
-            <div class="mb-3" style="text-align: center">
-                <h5><b>João Rosa</b></h5>
-            </div>
-            <div style="height: 85%; overflow: auto">
-                <div>
-                    <div class="mb-1 p-3 bg-body" style="width: 100%">
-                    <p style="display: inline" class="">Vais a alguma atividade no próximo mês?</p>
-                    </div>
-                    <div class="mb-1 p-3 bg-body" style="width: 100%; text-align: right">
-                    <p style="display: inline" class="">Acho que só vou a uma</p>
-                    </div><div class="mb-1 p-3 bg-body" style="width: 100%">
-                    <p style="display: inline" class="">Qual?</p>
-                    </div><div class="mb-1 p-3 bg-body" style="width: 100%; text-align: right">
-                    <p style="display: inline" class="">Dia 26</p>
-                    </div><div class="mb-1 p-3 bg-body" style="width: 100%">
-                    <p style="display: inline" class="">Vemo-nos lá então!!</p>
-                    </div>
-                    <textarea class="form-control" style="height: 20px" />
-                    <button
-                        class="form-control btn btn-primary"
-                        style="height: 1%;">Enviar</button
-                    >
+            <div style="height: 50%" class="shadow-none m-1 rounded">
+                <div class="mb-3" style="text-align: center">
+                    <h5><b>Contactos</b></h5>
+                </div>
+                <div style="height: 85%; overflow: auto">
+                    {#each nameList as chatName}
+                        <Contact person={chatName} />
+                    {/each}
                 </div>
             </div>
+            <div style="height: 50%" class="shadow-none m-1 rounded">
+                <div class="mb-3" style="text-align: center">
+                    <h5><b>João Rosa</b></h5>
+                </div>
+                <div style="height: 85%; overflow: auto">
+                    <div>
+                        <div class="mb-1 p-3 bg-body" style="width: 100%">
+                            <p style="display: inline" class="">
+                                Vais a alguma atividade no próximo mês?
+                            </p>
+                        </div>
+                        <div
+                            class="mb-1 p-3 bg-body"
+                            style="width: 100%; text-align: right"
+                        >
+                            <p style="display: inline" class="">
+                                Acho que só vou a uma
+                            </p>
+                        </div>
+                        <div class="mb-1 p-3 bg-body" style="width: 100%">
+                            <p style="display: inline" class="">Qual?</p>
+                        </div>
+                        <div
+                            class="mb-1 p-3 bg-body"
+                            style="width: 100%; text-align: right"
+                        >
+                            <p style="display: inline" class="">Dia 26</p>
+                        </div>
+                        <div class="mb-1 p-3 bg-body" style="width: 100%">
+                            <p style="display: inline" class="">
+                                Vemo-nos lá então!!
+                            </p>
+                        </div>
+                        <textarea class="form-control" style="height: 20px" />
+                        <button
+                            class="form-control btn btn-primary"
+                            style="height: 1%;">Enviar</button
+                        >
+                    </div>
+                </div>
             </div>
         </div>
     </div>
