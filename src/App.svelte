@@ -4,10 +4,20 @@
     import Home from "./components/Home.svelte";
     import Admin from "./components/Admin.svelte";
     import Pagamento from "./components/Pagamento.svelte";
+    import {posts} from "./stores/stores.js";
     var main_tab = "home";
     let admin_mode = true;
     let textSelected = "text";
     let postText = "";
+
+    function publishPost() {
+        console.log(posts);
+        posts.update((value) => {
+            return [postText, ...value];
+        });
+        postText = "";
+    }
+
 </script>
 
 <main>
@@ -279,6 +289,7 @@
             <div class="modal-footer">
                 <button
                     type="button"
+                    on:click={publishPost}
                     class="btn btn-primary"
                     data-bs-dismiss="modal">Publicar</button
                 >

@@ -1,10 +1,11 @@
 <script>
     import Contact from "./Contact.svelte";
+    import {posts} from "../stores/stores.js";
+    import { nameList } from "./MemberList.svelte";
     var n = [1, 1, 1, 1, 1, 1, 1, 1, 1];
     var files;
     var fileCount = 0;
     let postText = "";
-    let userPosts = [];
     $: if (files) {
         fileCount = files.length;
     }
@@ -14,12 +15,14 @@
     }
 
     function publishPost() {
-        userPosts = [postText, ...userPosts];
+        console.log(posts);
+        posts.update((value) => {
+            return [postText, ...value];
+        });
         files = [];
         postText = "";
     }
 
-    import { nameList } from "./MemberList.svelte";
 </script>
 
 <main>
@@ -112,7 +115,7 @@
                         </div>
                     </div>
                 </div>
-                {#each userPosts as post}
+                {#each $posts as post}
                 <div class="p-3 mt-3 bg-body rounded" style="width: 100%">
                     <img
                         src="static/default_avatar.png"
