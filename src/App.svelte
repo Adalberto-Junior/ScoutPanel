@@ -4,7 +4,6 @@
     import Home from "./components/Home.svelte";
     import Admin from "./components/Admin.svelte";
     import Pagamento from "./components/Pagamento.svelte";
-    import * as animateScroll from "svelte-scrollto";
     var main_tab = "home";
     let admin_mode = true;
     let textSelected = "text";
@@ -17,7 +16,6 @@
         <div class="shadow-none p-3 m-3 rounded">
             <a
                 href="#top"
-                on:click={() => animateScroll.scrollToTop()}
                 class="nav-link"
                 style="display: block"
                 on:click={() => (main_tab = "home")}
