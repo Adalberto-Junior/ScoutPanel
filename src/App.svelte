@@ -1,5 +1,5 @@
 <script>
-// @ts-nocheck
+    // @ts-nocheck
 
     import Home from "./components/Home.svelte";
     import Admin from "./components/Admin.svelte";
@@ -7,11 +7,12 @@
     var main_tab = "home";
     let admin_mode = true;
     let textSelected = "text";
+    let postText = "";
 </script>
 
 <main>
     <div
-        style="height: 100%; width: 20%; position: absolute; top: 0; left: 0; overflow: auto"
+        style="height: 100%; width: 16%; position: absolute; top: 0; left: 0; overflow: auto"
     >
         <div class="shadow-none p-3 m-3 rounded">
             <a
@@ -154,6 +155,7 @@
         <div class="shadow-none p-3 m-3 text-bg-primary rounded">
             <a
                 href="#"
+                align="center"
                 class="nav-link"
                 data-bs-toggle="modal"
                 data-bs-target="#publishModal"
@@ -174,14 +176,14 @@
         </div>
     </div>
     <div
-        style="height: 100%; width: 80%; position: absolute; top: 0; right: 0;"
+        style="height: 100%; width: 84%; position: absolute; top: 0; right: 0;"
     >
         {#if main_tab == "home"}
             <Home />
         {:else if main_tab == "admin"}
             <Admin />
-      {:else if main_tab == "pagamentos"}
-            <Pagamento/> 
+        {:else if main_tab == "pagamentos"}
+            <Pagamento />
         {/if}
     </div>
 </main>
@@ -253,6 +255,7 @@
 
             <div class="modal-body">
                 <input
+                    bind:value={postText}
                     type="text"
                     class="form-control"
                     id="nome"

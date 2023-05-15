@@ -4,6 +4,7 @@
     var files;
     var fileCount = 0;
     let postText = "";
+    let userPosts = [];
     $: if (files) {
         fileCount = files.length;
     }
@@ -13,21 +14,11 @@
     }
 
     function publishPost() {
+        userPosts = [postText, ...userPosts];
         files = [];
         postText = "";
     }
 
-    const chatNames = [
-        "Marco Almeida",
-        "Daniel Silva",
-        "Adalberto Rosário",
-        "Maria Nunes",
-        "João Rosa",
-        "Ana Mota",
-        "João Paz",
-        "Luis Azevedo",
-        "Gustavo Teixeira",
-    ];
     import { nameList } from "./MemberList.svelte";
 </script>
 
@@ -121,6 +112,7 @@
                         </div>
                     </div>
                 </div>
+                {#each userPosts as post}
                 <div class="p-3 mt-3 bg-body rounded" style="width: 100%">
                     <img
                         src="static/default_avatar.png"
@@ -128,7 +120,19 @@
                         class="m-3"
                         alt="user"
                     />
-                    <h5 style="display: inline" class="">Manel Escuteiro</h5>
+                    <h5 style="display: inline" class="">Você</h5>
+                    <p class="m-3">{post}</p>
+                </div>
+                {/each}
+                
+                <div class="p-3 mt-3 bg-body rounded" style="width: 100%">
+                    <img
+                        src="static/default_avatar.png"
+                        style="width: 50px; heigth: 50px"
+                        class="m-3"
+                        alt="user"
+                    />
+                    <h5 style="display: inline" class="">Maria Nunes</h5>
                     <p class="m-3">Grande dia!</p>
                     <img
                         src="https://flordelis.escutismo.pt/wp-content/uploads/sites/2/2021/01/porque-contratar-uma-pessoa-que-tenha-sido-escuteira.jpg"
@@ -143,7 +147,7 @@
                         class="m-3"
                         alt="user"
                     />
-                    <h5 style="display: inline" class="">João Escuteiro</h5>
+                    <h5 style="display: inline" class="">João Rosa</h5>
                     <p class="m-3">
                         A melhor foto que tiramos há duas semanas!
                     </p>
@@ -161,8 +165,8 @@
                         class="m-3"
                         alt="user"
                     />
-                    <h5 style="display: inline" class="">Zé Escuteiro</h5>
-                    <p class="m-3">Foto de grupo de ontém!</p>
+                    <h5 style="display: inline" class="">Alexandre Rodrigues</h5>
+                    <p class="m-3">Foto de grupo de ontem!</p>
                     <img
                         src="https://agencia.ecclesia.pt/portal/wp-content/uploads/2018/04/Escutismo.jpg"
                         style="width: 100%"
@@ -173,7 +177,7 @@
         </div>
     </div>
     <div
-        style="height: 100%; width: 25%; position: absolute; top: 0; right: 0;"
+        style="height: 100%; width: 28%; position: absolute; top: 0; right: 0;"
         class="p-3"
     >
         <div style="height: 100%" class="shadow-none p-3 bg-light rounded">

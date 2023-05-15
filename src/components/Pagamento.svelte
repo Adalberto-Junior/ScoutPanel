@@ -5,7 +5,6 @@
     export let index;
 
     const id = `${index}`;
-    const innerId = `inner${index}`;
 
     /**
      * Returns a random number between min (inclusive) and max (exclusive)
