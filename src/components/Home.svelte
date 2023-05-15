@@ -175,17 +175,26 @@
     >
         <div style="height: 100%" class="shadow-none p-3 bg-light rounded">
             <div
-                style="height: 50%; overflow: auto"
+                style="height: 50%"
                 class="shadow-none m-1 rounded"
             >
+            <div class="mb-3" style="text-align: center">
+                <h5><b>Contactos</b></h5>
+            </div>
+            <div style="height: 85%; overflow: auto">
                 {#each nameList as chatName}
                     <Contact person={chatName} />
                 {/each}
             </div>
+            </div>
             <div
-                style="height: 50%; overflow: auto"
+                style="height: 50%"
                 class="shadow-none m-1 rounded"
             >
+            <div class="mb-3" style="text-align: center">
+                <h5><b>João Rosa</b></h5>
+            </div>
+            <div style="height: 85%; overflow: auto">
                 <div>
                     <div class="mb-1 p-3 bg-body" style="width: 100%">
                     <p style="display: inline" class="">Vais a alguma atividade no próximo mês?</p>
@@ -205,6 +214,7 @@
                         style="height: 1%;">Enviar</button
                     >
                 </div>
+            </div>
             </div>
         </div>
     </div>
