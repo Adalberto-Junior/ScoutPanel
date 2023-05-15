@@ -1,12 +1,8 @@
 <script>
-   
-    
-   
-    function clear() {  
+    function clear() {
         //função para limpar os campos!
     }
     export let index;
-    
 
     const id = `${index}`;
     const innerId = `inner${index}`;
@@ -25,7 +21,7 @@
     <div class="accordion" id="accordionExample{id}">
         <div class="accordion-item">
             <div class="accordion-body">
-                <h2 align="center">Minha quota</h2>
+                <h2 align="center">Os Meus Pagamentos</h2>
                 <ul class="list-group">
                     <li
                         class="list-group-item d-flex justify-content-between align-items-start"
@@ -73,7 +69,6 @@
                                     dívida
                                 </div>
                                 <button
-                                  
                                     type="button"
                                     class="btn btn-primary"
                                     data-bs-toggle="modal"
@@ -141,7 +136,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h1 class="modal-title fs-5" id="exampleModalLabel">
-                            Pagamento
+                            Efetuar Pagamento
                         </h1>
                         <button
                             type="button"
@@ -159,44 +154,30 @@
                             class="form-control"
                             id="card"
                             maxlength="16"
-                           
                         />
-                    </div>
-                    <div class="modal-body">
                         <div class="col-md-5">
-                            <label for="valid" class="form-label m-1">Validade</label
+                            <label for="valid" class="form-label m-1"
+                                >Validade</label
                             >
                             <input
                                 type="month"
                                 class="form-control"
                                 id="valid"
-                                
                             />
-                        </div>  
-                    </div>
-                    <div class="modal-body">  
+                        </div>
                         <div class="col-md-3">
-                            <label for="cvc" class="form-label m-1">CVC</label
-                            >
+                            <label for="cvc" class="form-label m-1">CVC</label>
                             <input
                                 type="number"
                                 maxlength="3"
                                 class="form-control"
                                 id="cvc"
-                               
                             />
                         </div>
-                    </div>
-                    <div class="modal-body">
                         <label for="Titular" class="form-label m-1"
                             >Titular do Cartão</label
                         >
-                        <input
-                            type="text"
-                            class="form-control"
-                            id="titular"
-                            
-                        />
+                        <input type="text" class="form-control" id="titular" />
                     </div>
 
                     <div class="modal-footer">
@@ -205,47 +186,45 @@
                             data-bs-dismiss="modal"
                             class="btn btn-primary"
                             data-bs-toggle="modal"
-                            data-bs-target="#exampleModal2"
-                            >Pagar</button
+                            data-bs-target="#exampleModal2">Pagar</button
                         >
                     </div>
                 </div>
             </div>
         </div>
-       <!-- Modal -->
-       <div
-       class="modal fade"
-       id="exampleModal2"
-       tabindex="-1"
-       aria-labelledby="exampleModalLabel"
-       aria-hidden="true"
-   >
-       <div class="modal-dialog">
-           <div class="modal-content">
-               <div class="modal-header">
-                   <h1 class="modal-title fs-5" id="exampleModalLabel">
-                       Aviso!
-                   </h1>
-                   <button
-                       type="button"
-                       class="btn-close"
-                       data-bs-dismiss="modal"
-                       aria-label="Close"
-                   />
-               </div>
-               <div class="modal-body">O Pagamento será processado!</div>
-               <div class="modal-footer">
-                   <button
-                       type="button"
-                       data-bs-dismiss="modal"
-                       class="btn btn-primary"
-                       >OK</button
-                   >
-               </div>
-           </div>
-       </div>
-   </div>    
-</div>
+        <!-- Modal -->
+        <div
+            class="modal fade"
+            id="exampleModal2"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Aviso!
+                        </h1>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        />
+                    </div>
+                    <div class="modal-body">O Pagamento será processado!</div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            data-bs-dismiss="modal"
+                            class="btn btn-primary">OK</button
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
 
 <style>
