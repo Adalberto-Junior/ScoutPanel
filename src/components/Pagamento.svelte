@@ -17,6 +17,9 @@
 </script>
 
 <main>
+    <div style="height: 100%; width: 75%; position: absolute; top: 0; left: 0; overflow:auto"
+    class="p-3">
+
     <div class="accordion" id="accordionExample{id}">
         <div class="accordion-item">
             <div class="accordion-body">
@@ -224,6 +227,7 @@
             </div>
         </div>
     </div>
+</div>
 </main>
 
 <style>
