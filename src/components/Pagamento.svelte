@@ -6,7 +6,7 @@
         //função para limpar os campos!
     }
     export let index;
-    export let person;
+    
 
     const id = `${index}`;
     const innerId = `inner${index}`;
@@ -25,7 +25,7 @@
     <div class="accordion" id="accordionExample{id}">
         <div class="accordion-item">
             <div class="accordion-body">
-                <h2 align="center">Minha Cota</h2>
+                <h2 align="center">Minha quota</h2>
                 <ul class="list-group">
                     <li
                         class="list-group-item d-flex justify-content-between align-items-start"
