@@ -6,7 +6,7 @@
     import Pagamento from "./components/Pagamento.svelte";
     import {posts} from "./stores/stores.js";
     var main_tab = "home";
-    let admin_mode = true;
+    let admin_mode = false;
     let textSelected = "text";
     let postText = "";
 
@@ -180,7 +180,7 @@
                 id="flexSwitchCheckChecked"
                 bind:checked={admin_mode}
             />
-            <label class="form-check-label" for="flexSwitchCheckChecked"
+            <label class="form-check-label" for="flexSwitchCheckDefault"
                 >Modo de Administrador</label
             >
         </div>

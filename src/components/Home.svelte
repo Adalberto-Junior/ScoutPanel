@@ -27,7 +27,7 @@
 
 <main>
     <div
-        style="height: 100%; width: 75%; position: absolute; top: 0; left: 0;"
+        style="height: 100%; width: 72%; position: absolute; top: 0; left: 0;"
         class="p-3"
     >
         <div style="height: 100%" class="shadow-none p-3 bg-light rounded">
