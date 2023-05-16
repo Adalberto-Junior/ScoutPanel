@@ -1,6 +1,6 @@
 <script>
     import Contact from "./Contact.svelte";
-    import {posts} from "../stores/stores.js";
+    import { posts } from "../stores/stores.js";
     import { nameList } from "./MemberList.svelte";
     var n = [1, 1, 1, 1, 1, 1, 1, 1, 1];
     var files;
@@ -22,7 +22,6 @@
         files = [];
         postText = "";
     }
-
 </script>
 
 <main>
@@ -30,8 +29,8 @@
         style="height: 100%; width: 72%; position: absolute; top: 0; left: 0;"
         class="p-3"
     >
-        <div style="height: 100%" class="shadow-none p-3 bg-light rounded">
-            <div style="height: 100%; overflow: auto">
+        <div style="height: 100%; " class="shadow-none p-3 bg-light rounded">
+            <div style="height: 100%; overflow-y: auto;">
                 <!-- class= "hide-scrollbar" para esconder scrollbar -->
                 <div id="top" class="card mb-3">
                     <div class="card-body">
@@ -116,18 +115,18 @@
                     </div>
                 </div>
                 {#each $posts as post}
-                <div class="p-3 mt-3 bg-body rounded" style="width: 100%">
-                    <img
-                        src="static/default_avatar.png"
-                        style="width: 50px; heigth: 50px"
-                        class="m-3"
-                        alt="user"
-                    />
-                    <h5 style="display: inline" class="">Você</h5>
-                    <p class="m-3">{post}</p>
-                </div>
+                    <div class="p-3 mt-3 bg-body rounded" style="width: 100%">
+                        <img
+                            src="static/default_avatar.png"
+                            style="width: 50px; heigth: 50px"
+                            class="m-3"
+                            alt="user"
+                        />
+                        <h5 style="display: inline" class="">Você</h5>
+                        <p class="m-3">{post}</p>
+                    </div>
                 {/each}
-                
+
                 <div class="p-3 mt-3 bg-body rounded" style="width: 100%">
                     <img
                         src="static/default_avatar.png"
@@ -168,7 +167,9 @@
                         class="m-3"
                         alt="user"
                     />
-                    <h5 style="display: inline" class="">Alexandre Rodrigues</h5>
+                    <h5 style="display: inline" class="">
+                        Alexandre Rodrigues
+                    </h5>
                     <p class="m-3">Foto de grupo de ontem!</p>
                     <img
                         src="https://agencia.ecclesia.pt/portal/wp-content/uploads/2018/04/Escutismo.jpg"
@@ -238,25 +239,3 @@
         </div>
     </div>
 </main>
-
-<style>
-    .hide-scrollbar {
-        overflow-y: scroll;
-        /* set the height and width of the element as needed */
-    }
-
-    .hide-scrollbar::-webkit-scrollbar {
-        display: none;
-    }
-
-    textarea {
-        resize: none;
-        height: auto;
-        overflow-y: hidden;
-    }
-
-    textarea:active,
-    textarea:focus {
-        outline: none;
-    }
-</style>
