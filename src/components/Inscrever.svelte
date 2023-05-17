@@ -24,8 +24,7 @@
     };
     function signup() {
         if (!avatar) {
-            avatar =
-                "static/default_avatar.png";
+            avatar = "static/default_avatar.png";
         }
         nameList.push({
             name: newMemberName,
@@ -43,14 +42,23 @@
 <main>
     <div class="shadow-none p-3 m-3 bg-light rounded">
         <h2 align="center">Formulário de inscrição</h2>
-        <label for="nome" class="form-label m-1">Nome Completo</label>
+        Campos marcados com <span style="color: red;">(*)</span> são
+        obrigatórios.
+        <br />
+        <label for="nome" class="form-label m-1">
+            <span style="color: #0a58ca;">Nome Completo</span>
+            <span style="color: red;">(*)</span></label
+        >
         <input
             bind:value={newMemberName}
             type="text"
             class="form-control"
             id="nome"
         />
-        <label for="morada" class="form-label m-1">Morada</label>
+        <label for="morada" class="form-label m-1">
+            <span style="color: #0a58ca;">Morada</span>
+            <span style="color: red;">(*)</span>
+        </label>
         <input
             bind:value={newMemberAddress}
             type="text"
@@ -58,7 +66,10 @@
             id="morada"
         />
 
-        <label for="number" class="form-label m-1">Telemóvel/Telefone</label>
+        <label for="number" class="form-label m-1">
+            <span style="color: #0a58ca;">Telemóvel/Telefone</span>
+            <span style="color: red;">(*)</span>
+        </label>
         <input
             bind:value={newMemberNumber}
             type="number"
@@ -66,7 +77,10 @@
             id="number"
         />
 
-        <label for="date" class="form-label m-1">Data de nascimento</label>
+        <label for="date" class="form-label m-1">
+            <span style="color: #0a58ca;">Data de nascimento</span>
+            <span style="color: red;">(*)</span>
+        </label>
         <input
             bind:value={newMemberBirthdate}
             type="date"
@@ -74,7 +88,10 @@
             id="date"
         />
 
-        <label for="email" class="form-label m-1">Endereço de Email</label>
+        <label for="email" class="form-label m-1">
+            <span style="color: #0a58ca;">Endereço de Email</span>
+            <span style="color: red;">(*)</span>
+        </label>
         <input
             bind:value={newMemberEmail}
             type="email"
@@ -82,14 +99,19 @@
             id="email"
             placeholder="name@example.com"
         />
-        <label for="sexo" class="form-label m-1">Sexo</label>
+        <label for="sexo" class="form-label m-1"
+            ><span style="color: #0a58ca;">Sexo</span>
+            <span style="color: red;">(*)</span></label
+        >
         <select bind:value={newMemberSex} class="form-select" aria-label="Sexo">
             <option value="Feminino">Feminino</option>
             <option value="Masculino">Masculino</option>
             <option value="Outro">Outro</option>
         </select>
 
-        <label for="aboutme" class="form-label m-1">Biografia</label>
+        <label for="aboutme" class="form-label m-1"
+            ><span style="color: #0a58ca;">Biografia</span>
+        </label>
         <textarea
             bind:value={newMemberBio}
             class="form-control"
