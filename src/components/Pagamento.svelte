@@ -140,6 +140,7 @@
                         <h1 class="modal-title fs-5" id="exampleModalLabel">
                             Efetuar Pagamento
                         </h1>
+                        
                         <button
                             type="button"
                             class="btn-close"
@@ -147,9 +148,15 @@
                             aria-label="Close"
                         />
                     </div>
+                    
+                        
                     <div class="modal-body">
+                        Campos marcados com <span style="color: red;">(*)</span> são
+        obrigatórios.
+        <br>
                         <label for="card" class="form-label m-1"
-                            >Número do cartão</label
+                            ><span style="color: #0a58ca;">Número do cartão</span>
+                            <span style="color: red;">(*)</span></label
                         >
                         <input
                             type="number"
@@ -159,7 +166,8 @@
                         />
                         <div class="col-md-5">
                             <label for="valid" class="form-label m-1"
-                                >Validade</label
+                                ><span style="color: #0a58ca;">Validade</span>
+                                <span style="color: red;">(*)</span></label
                             >
                             <input
                                 type="month"
@@ -168,7 +176,8 @@
                             />
                         </div>
                         <div class="col-md-3">
-                            <label for="cvc" class="form-label m-1">CVC</label>
+                            <label for="cvc" class="form-label m-1"><span style="color: #0a58ca;">CVC</span>
+                                <span style="color: red;">(*)</span></label>
                             <input
                                 type="number"
                                 maxlength="3"
@@ -177,20 +186,23 @@
                             />
                         </div>
                         <label for="Titular" class="form-label m-1"
-                            >Titular do Cartão</label
+                            ><span style="color: #0a58ca;">Titular do Cartão</span>
+                            </label
                         >
                         <input type="text" class="form-control" id="titular" />
+                    
                     </div>
-
+                    
                     <div class="modal-footer">
                         <button
-                            type="button"
-                            data-bs-dismiss="modal"
-                            class="btn btn-primary"
-                            data-bs-toggle="modal"
-                            data-bs-target="#exampleModal2">Pagar</button
+                        type="submit"
+                        data-bs-dismiss="modal"
+                        class="btn btn-primary"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal2">Pagar</button
                         >
                     </div>
+                
                 </div>
             </div>
         </div>
