@@ -22,6 +22,12 @@
         files = [];
         postText = "";
     }
+
+    function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
 </script>
 
 <main>
@@ -124,6 +130,48 @@
                         />
                         <h5 style="display: inline" class="">Você</h5>
                         <p class="m-3">{post}</p>
+                        <div
+                        style="width: 100%; display: flex; justify-content: space-between;"
+                    >
+                        <div
+                            style="height: 100%; width: 33%; text-align: center;"
+                        >
+                            <svg
+                                style="width: 25px; heigth: 25px"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                ><title>share-outline</title><path
+                                    style="fill: blue;"
+                                    d="M14,5V9C7,10 4,15 3,20C5.5,16.5 9,14.9 14,14.9V19L21,12L14,5M16,9.83L18.17,12L16,14.17V12.9H14C11.93,12.9 10.07,13.28 8.34,13.85C9.74,12.46 11.54,11.37 14.28,11L16,10.73V9.83Z"
+                                /></svg
+                            >
+                            0
+                        </div>
+                        <div style="width: 33%; text-align: center">
+                            <svg
+                                style="width: 22px; heigth: 22px"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                ><title>comment-outline</title><path
+                                    style="fill: green;"
+                                    d="M9,22A1,1 0 0,1 8,21V18H4A2,2 0 0,1 2,16V4C2,2.89 2.9,2 4,2H20A2,2 0 0,1 22,4V16A2,2 0 0,1 20,18H13.9L10.2,21.71C10,21.9 9.75,22 9.5,22V22H9M10,16V19.08L13.08,16H20V4H4V16H10Z"
+                                /></svg
+                            >
+                            0
+                        </div>
+                        <div style="width: 33%; text-align: center">
+                            <svg
+                                style="width: 25px; heigth: 25px"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                ><title>heart-outline</title><path
+                                    style="fill: red;"
+                                    d="M12.1,18.55L12,18.65L11.89,18.55C7.14,14.24 4,11.39 4,8.5C4,6.5 5.5,5 7.5,5C9.04,5 10.54,6 11.07,7.36H12.93C13.46,6 14.96,5 16.5,5C18.5,5 20,6.5 20,8.5C20,11.39 16.86,14.24 12.1,18.55M16.5,3C14.76,3 13.09,3.81 12,5.08C10.91,3.81 9.24,3 7.5,3C4.42,3 2,5.41 2,8.5C2,12.27 5.4,15.36 10.55,20.03L12,21.35L13.45,20.03C18.6,15.36 22,12.27 22,8.5C22,5.41 19.58,3 16.5,3Z"
+                                /></svg
+                            >
+                            0
+                        </div>
+                    </div>
                     </div>
                 {/each}
 
@@ -141,6 +189,48 @@
                         style="width: 100%"
                         alt="nerd"
                     />
+                    <div
+                        style="width: 100%; display: flex; justify-content: space-between;"
+                    >
+                        <div
+                            style="height: 100%; width: 33%; text-align: center;"
+                        >
+                            <svg
+                                style="width: 25px; heigth: 25px"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                ><title>share-outline</title><path
+                                    style="fill: blue;"
+                                    d="M14,5V9C7,10 4,15 3,20C5.5,16.5 9,14.9 14,14.9V19L21,12L14,5M16,9.83L18.17,12L16,14.17V12.9H14C11.93,12.9 10.07,13.28 8.34,13.85C9.74,12.46 11.54,11.37 14.28,11L16,10.73V9.83Z"
+                                /></svg
+                            >
+                            {getRandomInt(10, 20)}
+                        </div>
+                        <div style="width: 33%; text-align: center">
+                            <svg
+                                style="width: 22px; heigth: 22px"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                ><title>comment-outline</title><path
+                                    style="fill: green;"
+                                    d="M9,22A1,1 0 0,1 8,21V18H4A2,2 0 0,1 2,16V4C2,2.89 2.9,2 4,2H20A2,2 0 0,1 22,4V16A2,2 0 0,1 20,18H13.9L10.2,21.71C10,21.9 9.75,22 9.5,22V22H9M10,16V19.08L13.08,16H20V4H4V16H10Z"
+                                /></svg
+                            >
+                            {getRandomInt(5, 15)}
+                        </div>
+                        <div style="width: 33%; text-align: center">
+                            <svg
+                                style="width: 25px; heigth: 25px"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                ><title>heart-outline</title><path
+                                    style="fill: red;"
+                                    d="M12.1,18.55L12,18.65L11.89,18.55C7.14,14.24 4,11.39 4,8.5C4,6.5 5.5,5 7.5,5C9.04,5 10.54,6 11.07,7.36H12.93C13.46,6 14.96,5 16.5,5C18.5,5 20,6.5 20,8.5C20,11.39 16.86,14.24 12.1,18.55M16.5,3C14.76,3 13.09,3.81 12,5.08C10.91,3.81 9.24,3 7.5,3C4.42,3 2,5.41 2,8.5C2,12.27 5.4,15.36 10.55,20.03L12,21.35L13.45,20.03C18.6,15.36 22,12.27 22,8.5C22,5.41 19.58,3 16.5,3Z"
+                                /></svg
+                            >
+                            {getRandomInt(30, 70)}
+                        </div>
+                    </div>
                 </div>
                 <div class="p-3 mt-3 bg-body rounded" style="width: 100%">
                     <img
@@ -158,6 +248,48 @@
                         style="width: 100%"
                         alt=""
                     />
+                    <div
+                        style="width: 100%; display: flex; justify-content: space-between;"
+                    >
+                        <div
+                            style="height: 100%; width: 33%; text-align: center;"
+                        >
+                            <svg
+                                style="width: 25px; heigth: 25px"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                ><title>share-outline</title><path
+                                    style="fill: blue;"
+                                    d="M14,5V9C7,10 4,15 3,20C5.5,16.5 9,14.9 14,14.9V19L21,12L14,5M16,9.83L18.17,12L16,14.17V12.9H14C11.93,12.9 10.07,13.28 8.34,13.85C9.74,12.46 11.54,11.37 14.28,11L16,10.73V9.83Z"
+                                /></svg
+                            >
+                            {getRandomInt(10, 20)}
+                        </div>
+                        <div style="width: 33%; text-align: center">
+                            <svg
+                                style="width: 22px; heigth: 22px"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                ><title>comment-outline</title><path
+                                    style="fill: green;"
+                                    d="M9,22A1,1 0 0,1 8,21V18H4A2,2 0 0,1 2,16V4C2,2.89 2.9,2 4,2H20A2,2 0 0,1 22,4V16A2,2 0 0,1 20,18H13.9L10.2,21.71C10,21.9 9.75,22 9.5,22V22H9M10,16V19.08L13.08,16H20V4H4V16H10Z"
+                                /></svg
+                            >
+                            {getRandomInt(5, 15)}
+                        </div>
+                        <div style="width: 33%; text-align: center">
+                            <svg
+                                style="width: 25px; heigth: 25px"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                ><title>heart-outline</title><path
+                                    style="fill: red;"
+                                    d="M12.1,18.55L12,18.65L11.89,18.55C7.14,14.24 4,11.39 4,8.5C4,6.5 5.5,5 7.5,5C9.04,5 10.54,6 11.07,7.36H12.93C13.46,6 14.96,5 16.5,5C18.5,5 20,6.5 20,8.5C20,11.39 16.86,14.24 12.1,18.55M16.5,3C14.76,3 13.09,3.81 12,5.08C10.91,3.81 9.24,3 7.5,3C4.42,3 2,5.41 2,8.5C2,12.27 5.4,15.36 10.55,20.03L12,21.35L13.45,20.03C18.6,15.36 22,12.27 22,8.5C22,5.41 19.58,3 16.5,3Z"
+                                /></svg
+                            >
+                            {getRandomInt(30, 70)}
+                        </div>
+                    </div>
                 </div>
 
                 <div class="p-3 mt-3 bg-body rounded" style="width: 100%">
@@ -176,6 +308,48 @@
                         style="width: 100%"
                         alt=""
                     />
+                    <div
+                        style="width: 100%; display: flex; justify-content: space-between;"
+                    >
+                        <div
+                            style="height: 100%; width: 33%; text-align: center;"
+                        >
+                            <svg
+                                style="width: 25px; heigth: 25px"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                ><title>share-outline</title><path
+                                    style="fill: blue;"
+                                    d="M14,5V9C7,10 4,15 3,20C5.5,16.5 9,14.9 14,14.9V19L21,12L14,5M16,9.83L18.17,12L16,14.17V12.9H14C11.93,12.9 10.07,13.28 8.34,13.85C9.74,12.46 11.54,11.37 14.28,11L16,10.73V9.83Z"
+                                /></svg
+                            >
+                            {getRandomInt(10, 20)}
+                        </div>
+                        <div style="width: 33%; text-align: center">
+                            <svg
+                                style="width: 22px; heigth: 22px"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                ><title>comment-outline</title><path
+                                    style="fill: green;"
+                                    d="M9,22A1,1 0 0,1 8,21V18H4A2,2 0 0,1 2,16V4C2,2.89 2.9,2 4,2H20A2,2 0 0,1 22,4V16A2,2 0 0,1 20,18H13.9L10.2,21.71C10,21.9 9.75,22 9.5,22V22H9M10,16V19.08L13.08,16H20V4H4V16H10Z"
+                                /></svg
+                            >
+                            {getRandomInt(5, 15)}
+                        </div>
+                        <div style="width: 33%; text-align: center">
+                            <svg
+                                style="width: 25px; heigth: 25px"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                ><title>heart-outline</title><path
+                                    style="fill: red;"
+                                    d="M12.1,18.55L12,18.65L11.89,18.55C7.14,14.24 4,11.39 4,8.5C4,6.5 5.5,5 7.5,5C9.04,5 10.54,6 11.07,7.36H12.93C13.46,6 14.96,5 16.5,5C18.5,5 20,6.5 20,8.5C20,11.39 16.86,14.24 12.1,18.55M16.5,3C14.76,3 13.09,3.81 12,5.08C10.91,3.81 9.24,3 7.5,3C4.42,3 2,5.41 2,8.5C2,12.27 5.4,15.36 10.55,20.03L12,21.35L13.45,20.03C18.6,15.36 22,12.27 22,8.5C22,5.41 19.58,3 16.5,3Z"
+                                /></svg
+                            >
+                            {getRandomInt(30, 70)}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
