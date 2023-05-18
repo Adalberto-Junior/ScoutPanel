@@ -40,7 +40,10 @@
 </script>
 
 <main>
+    <button id='secretButton' type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style='display:none'></button>
+
     <div class="shadow-none p-3 m-3 bg-light rounded">
+        <form on:submit={()=>{signup(); document.getElementById('secretButton').click(); return false;}}>
         <h2 align="center">Formulário de inscrição</h2>
         Campos marcados com <span style="color: red;">(*)</span> são
         obrigatórios.
@@ -54,6 +57,7 @@
             type="text"
             class="form-control"
             id="nome"
+            required
         />
         <label for="morada" class="form-label m-1">
             <span style="color: #0a58ca;">Morada</span>
@@ -64,6 +68,7 @@
             type="text"
             class="form-control"
             id="morada"
+            required
         />
 
         <label for="number" class="form-label m-1">
@@ -75,6 +80,7 @@
             type="number"
             class="form-control"
             id="number"
+            required
         />
 
         <label for="date" class="form-label m-1">
@@ -86,6 +92,7 @@
             type="date"
             class="form-control"
             id="date"
+            required
         />
 
         <label for="email" class="form-label m-1">
@@ -98,12 +105,13 @@
             class="form-control"
             id="email"
             placeholder="name@example.com"
+            required
         />
         <label for="sexo" class="form-label m-1"
             ><span style="color: #0a58ca;">Sexo</span>
             <span style="color: red;">(*)</span></label
         >
-        <select bind:value={newMemberSex} class="form-select" aria-label="Sexo">
+        <select bind:value={newMemberSex} class="form-select" aria-label="Sexo" required>
             <option value="Feminino">Feminino</option>
             <option value="Masculino">Masculino</option>
             <option value="Outro">Outro</option>
@@ -148,14 +156,12 @@
         </div>
         <!-- Button trigger modal -->
         <button
-            on:click={signup}
-            type="button"
+            type="submit"
             class="btn btn-primary"
-            data-bs-toggle="modal"
-            data-bs-target="#exampleModal"
         >
             Inscrever
         </button>
+        </form>
 
         <!-- Modal -->
         <div
