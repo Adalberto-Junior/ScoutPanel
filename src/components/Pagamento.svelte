@@ -149,7 +149,7 @@
                         />
                     </div>
                     
-                        
+                    <form on:submit={()=>{document.getElementById('secretButton').click(); return false;}}>
                     <div class="modal-body">
                         Campos marcados com <span style="color: red;">(*)</span> são
         obrigatórios.
@@ -163,6 +163,7 @@
                             class="form-control"
                             id="card"
                             maxlength="16"
+                            required
                         />
                         <div class="col-md-5">
                             <label for="valid" class="form-label m-1"
@@ -173,6 +174,7 @@
                                 type="month"
                                 class="form-control"
                                 id="valid"
+                                required
                             />
                         </div>
                         <div class="col-md-3">
@@ -183,26 +185,31 @@
                                 maxlength="3"
                                 class="form-control"
                                 id="cvc"
+                                required
                             />
                         </div>
                         <label for="Titular" class="form-label m-1"
                             ><span style="color: #0a58ca;">Titular do Cartão</span>
                             </label
                         >
-                        <input type="text" class="form-control" id="titular" />
-                    
+                        <input type="text" class="form-control" id="titular" required/>
                     </div>
                     
                     <div class="modal-footer">
                         <button
                         type="submit"
+                        class="btn btn-primary"
+                        >Pagar</button
+                        >
+                    </div>
+                </form>
+                <button id='secretButton'
+                        style='display:none'
                         data-bs-dismiss="modal"
                         class="btn btn-primary"
                         data-bs-toggle="modal"
                         data-bs-target="#exampleModal2">Pagar</button
                         >
-                    </div>
-                
                 </div>
             </div>
         </div>
