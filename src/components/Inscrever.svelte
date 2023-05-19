@@ -7,6 +7,7 @@
 
     let avatar, fileinput;
     import { nameList } from "./MemberList.svelte";
+    import { nameList as nameList2 }  from "./ListaPagamentos.svelte";
     let newMemberName = "";
     let newMemberAddress = "";
     let newMemberNumber = "";
@@ -27,6 +28,15 @@
             avatar = "static/default_avatar.png";
         }
         nameList.push({
+            name: newMemberName,
+            address: newMemberAddress,
+            phoneNumber: newMemberNumber,
+            email: newMemberEmail,
+            birthDate: newMemberBirthdate,
+            sex: newMemberSex,
+            bio: newMemberBio,
+            image: avatar,
+        });nameList2.push({
             name: newMemberName,
             address: newMemberAddress,
             phoneNumber: newMemberNumber,

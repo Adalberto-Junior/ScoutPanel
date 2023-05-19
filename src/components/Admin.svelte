@@ -1,6 +1,7 @@
 <script>
     import Inscrever from "./Inscrever.svelte";
     import MemberList from "./MemberList.svelte";
+    import ListaPagamentos from "./ListaPagamentos.svelte";
 
     import { admin_tab } from "../stores/stores.js";
     let _admin_tab;
@@ -115,6 +116,28 @@
                 {/if}</a
             >
         </div>
+        <div class="shadow-none p-3 m-3 bg-light rounded">
+            <a
+                href="#"
+                class="nav-link"
+                style="display: block"
+                on:click={() => admin_tab.update(() => "listaPagamentos")}
+            >
+            <svg
+            fill="#0A58CA"
+            style="width: 30px; height: 30px;"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            ><title>cash</title><path
+                d="M3,6H21V18H3V6M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9M7,8A2,2 0 0,1 5,10V14A2,2 0 0,1 7,16H17A2,2 0 0,1 19,14V10A2,2 0 0,1 17,8H7Z"
+            /></svg
+        > {#if _admin_tab == "listaPagamentos"}
+                <strong>Lista de Pagamentos</strong>
+                {:else}
+                Lista de Pagamentos
+                {/if}</a
+            >
+        </div>
     </div>
     <div
         style="height: 100%; width: 75%; position: absolute; top: 0; right: 0;"
@@ -127,6 +150,10 @@
             <div style="height: 95%; overflow: auto">
                 <MemberList />
             </div>
-        {/if}
+        {:else if _admin_tab == "listaPagamentos"}
+        <div style="height: 95%; overflow: auto">
+            <ListaPagamentos />
+        </div>
+    {/if}
     </div>
 </main>
