@@ -27,6 +27,10 @@
         if (!avatar) {
             avatar = "static/default_avatar.png";
         }
+        if (!newMemberName||!newMemberAddress||!newMemberNumber||!newMemberEmail||!newMemberBirthdate||!newMemberSex) {
+            document.getElementById('secretButtonError').click();
+            return false;
+        }
         nameList.push({
             name: newMemberName,
             address: newMemberAddress,
@@ -46,14 +50,15 @@
             bio: newMemberBio,
             image: avatar,
         });
+        document.getElementById('secretButton').click();
     }
 </script>
 
 <main>
     <button id='secretButton' type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style='display:none'></button>
+    <button id='secretButtonError' type="button" data-bs-toggle="modal" data-bs-target="#exampleModalError" style='display:none'></button>
 
     <div class="shadow-none p-3 m-3 bg-light rounded">
-        <form on:submit={()=>{signup(); document.getElementById('secretButton').click(); return false;}}>
         <h2 align="center">Formulário de inscrição</h2>
         Campos marcados com <span style="color: red;">(*)</span> são
         obrigatórios.
@@ -166,12 +171,11 @@
         </div>
         <!-- Button trigger modal -->
         <button
-            type="submit"
             class="btn btn-primary"
+            on:click={()=>{signup()}}
         >
             Inscrever
         </button>
-        </form>
 
         <!-- Modal -->
         <div
@@ -202,6 +206,39 @@
                             class="btn btn-primary"
                             on:click={() => admin_tab.update(() => "lista")}
                             >Ver lista de membros</button
+                        >
+                        <!-- TODO: Meter este botao a dar redirect para a lista de membros -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            class="modal fade"
+            id="exampleModalError"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Erro!
+                        </h1>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        />
+                    </div>
+                    <div class="modal-body">Preencha todos os campos obrigatórios!</div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            data-bs-dismiss="modal"
+                            class="btn btn-primary"
+                            >Voltar</button
                         >
                         <!-- TODO: Meter este botao a dar redirect para a lista de membros -->
                     </div>
